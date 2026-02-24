@@ -1,16 +1,20 @@
 package com.midterm;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
-@NoArgsConstructor
-public class Savings extends Account{
-	
+@Document(collection = "savings")
+public class Savings extends Account {
+
 	private double interestRate;
-	
-	public Savings(String id, String accountHolder, double balance, double interestRate) {
-        super(id, accountHolder, balance);
-        this.interestRate = interestRate;
-    }
+
+	public Savings() {
+	}
+
+	public double getInterestRate() {
+		return interestRate;
+	}
+
+	public void setInterestRate(double interestRate) {
+		this.interestRate = interestRate;
+	}
 }

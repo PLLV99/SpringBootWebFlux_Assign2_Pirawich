@@ -1,18 +1,20 @@
 package com.midterm;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
-@NoArgsConstructor
+@Document(collection = "checking")
 public class Checking extends Account {
-	
+
 	private double insufficientFundFee;
-	
-    public Checking(String id, String accountHolder, double balance, double insufficientFundFee) {
-		super(id, accountHolder, balance);
-		this.insufficientFundFee = insufficientFundFee;
-	
+
+	public Checking() {
 	}
 
+	public double getInsufficientFundFee() {
+		return insufficientFundFee;
+	}
+
+	public void setInsufficientFundFee(double insufficientFundFee) {
+		this.insufficientFundFee = insufficientFundFee;
+	}
 }
