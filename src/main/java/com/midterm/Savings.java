@@ -2,7 +2,7 @@ package com.midterm;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "savings")
+@Document
 public class Savings extends Account {
 
 	private double interestRate;

@@ -2,7 +2,7 @@ package com.midterm;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "checking")
+@Document
 public class Checking extends Account {
 
 	private double insufficientFundFee;
